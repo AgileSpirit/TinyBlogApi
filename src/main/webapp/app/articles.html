@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TinyBlog - Articles</title>
+
+    <!-- Chargement des styles CSS de l'application -->
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+
+<div class="view articles">
+
+    <h1 class="app-title"><a href="articles.html">Tiny<b>Blog</b></a></h1>
+
+    <ul id="articles" class="article-list">
+        <li class="article-overview">
+            <div class="article-header">
+                <h2 class="article-title">
+                    <a class="article-link" href="#">{{article.title}}</a>
+                </h2>
+                <p class="article-meta">
+                    Publié par <span class="article-author">{{article.author}}</span>
+                    le <span class="article-publication-date">article.publicationDate</span>
+                </p>
+            </div>
+            <div class="article-body">
+                <p class="article-excerpt">{{article.excerpt}}</p>
+            </div>
+            <div class="article-footer">
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Chargement des bibliothèques JavaScript "Vendors" -->
+<script src="../lib/jquery/jquery-1.11.2.js"></script>
+
+<!-- Chargement des ressources JavaScript de l'application -->
+<script src="js/app.js"></script>
+<script src="js/service/article-service.js"></script>
+<script src="js/controller/articles-ctrl.js"></script>
+<script src="js/controller/article-ctrl.js"></script>
+
+<script>
+    $(function () {
+        app.articlesCtrl.init();
+    });
+</script>
+
+</body>
+</html>
