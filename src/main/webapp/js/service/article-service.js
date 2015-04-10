@@ -9,7 +9,7 @@ app.articleService = (function () {
       type: "GET",
       url: "http://localhost:8080/api/articles",
       dataType: "json",
-      success: function (data, httpStatus) {
+      success: function (data) {
         callback(data);
       },
       error: function (data, httpStatus, error) {
@@ -23,7 +23,7 @@ app.articleService = (function () {
       type: "GET",
       url: "http://localhost:8080/api/articles/" + id,
       dataType: "json",
-      success: function (data, httpStatus) {
+      success: function (data) {
         callback(data);
       },
       error: function (data, httpStatus, error) {
